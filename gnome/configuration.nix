@@ -7,6 +7,8 @@
 {imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/gnome.nix
+      ./modules/vscode.nix
     ];
 
   # Bootloader.
@@ -53,17 +55,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-
-  # Exclude Packages from GNOME
-  #environment.gnome.excludePackages = (with pkgs; [
-  #  pkgs.gnome.epiphany
-  #  pkgs.gnome-tour
-  #  pkgs.gnome.geary
-  #  pkgs.gnome-text-editor
-  #  pkgs.gnome.gnome-music
-  #  pkgs.gnome.gnome-maps
-  #  pkgs.gnome.gnome-weather
-  #]);
   
   # Configure keymap in X11
   services.xserver = {
@@ -127,10 +118,6 @@
   neovim
   wget
   git
-  pkgs.vscode
-  pkgs.vscode-extensions.jnoortheen.nix-ide
-  pkgs.nil
-  pkgs.direnv
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

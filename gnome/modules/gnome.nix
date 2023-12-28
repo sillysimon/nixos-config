@@ -1,6 +1,7 @@
 
 { config, pkgs, ... }:
 {
+  # Exclude Packages from GNOME
   environment.gnome.excludePackages = (with pkgs; [
     pkgs.gnome.epiphany
     pkgs.gnome-tour
