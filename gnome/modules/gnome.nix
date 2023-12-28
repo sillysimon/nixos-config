@@ -1,8 +1,8 @@
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   # Exclude Packages from GNOME
-  environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = ([
     pkgs.gnome.epiphany
     pkgs.gnome-tour
     pkgs.gnome.geary
@@ -11,4 +11,11 @@
     pkgs.gnome.gnome-maps
     pkgs.gnome.gnome-weather
   ]);
+
+  # add gnome specific tweaks and extensions
+  environment.systemPackages = [
+    pkgs.gnome.gnome-tweaks
+    pkgs.gnomeExtensions.dash-to-dock
+  ];
+  
 }
