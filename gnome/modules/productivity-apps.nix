@@ -5,5 +5,6 @@
   environment.systemPackages = [
     pkgs.nextcloud-client
     pkgs.xournalpp
+    pkgs.libreoffice-fresh
 ];
 }
