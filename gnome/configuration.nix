@@ -11,6 +11,7 @@
       ./modules/gnome.nix
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
+      ./modules/multimedia.nix
     ];
 
   # Bootloader.
@@ -111,6 +112,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Enable flatpak for even more Applications
+  services.flatpak.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

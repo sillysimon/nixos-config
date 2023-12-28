@@ -11,3 +11,5 @@ In this document, I'll provide links to ressources that helped build these confi
 ## Official Resources and Wikis
 - [https://nixos.wiki/wiki/GNOME](https://nixos.wiki/wiki/GNOME)
     - official wiki Entry for configuring gnome
+- [https://nixos.wiki/wiki/KDE](https://nixos.wiki/wiki/KDE)
+    - official wiki Entry for KDE
