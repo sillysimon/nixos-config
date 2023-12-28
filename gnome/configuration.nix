@@ -12,6 +12,7 @@
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
       ./modules/multimedia.nix
+      ./modules/environment.nix
     ];
 
   # Bootloader.

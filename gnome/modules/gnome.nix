@@ -24,6 +24,9 @@
   environment.systemPackages = [
     pkgs.gnome.gnome-tweaks
     pkgs.gnomeExtensions.dash-to-dock
+    pkgs.gnomeExtensions.appindicator
+    pkgs.gnomeExtensions.gsconnect
+    pkgs.gnomeExtensions.desktop-cube
   ];
   
 }
