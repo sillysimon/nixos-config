@@ -17,7 +17,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
   # Enable Flakes
-  #nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -46,9 +46,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Exclude xterm
-  services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
