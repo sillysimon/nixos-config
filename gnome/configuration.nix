@@ -56,10 +56,13 @@
 
   # Exclude Packages from GNOME
   environment.gnome.excludePackages = (with pkgs; [
-    epiphany
-    gnome-tour
+    pkgs.gnome.epiphany
+    pkgs.gnome-tour
     pkgs.gnome.geary
-    
+    pkgs.gnome-text-editor
+    pkgs.gnome.gnome-music
+    pkgs.gnome.gnome-maps
+    pkgs.gnome.gnome-weather
   ]);
   
   # Configure keymap in X11
@@ -127,6 +130,7 @@
   pkgs.vscode
   pkgs.vscode-extensions.jnoortheen.nix-ide
   pkgs.nil
+  pkgs.direnv
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
