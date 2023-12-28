@@ -21,7 +21,14 @@
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-            ./configuration.nix
+            ./gnome.nix
+            # inputs.home-manager.nixosModules.default
+          ];
+        };
+      nixosConfigurations.kde = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs;};
+          modules = [ 
+            ./kde.nix
             # inputs.home-manager.nixosModules.default
           ];
         };
