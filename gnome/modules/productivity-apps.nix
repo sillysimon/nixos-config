@@ -6,5 +6,7 @@
     pkgs.nextcloud-client
     pkgs.xournalpp
     pkgs.libreoffice-fresh
+    pkgs.thunderbird
+    pkgs.firefox
 ];
 }
