@@ -57,8 +57,9 @@
   # Exclude Packages from GNOME
   environment.gnome.excludePackages = (with pkgs; [
     epiphany
-  ])++(with pkgs.gnome; [
-    gnome-tweaks
+    gnome-tour
+    pkgs.gnome.geary
+    
   ]);
   
   # Configure keymap in X11
@@ -123,6 +124,9 @@
   neovim
   wget
   git
+  pkgs.vscode
+  pkgs.vscode-extensions.jnoortheen.nix-ide
+  pkgs.nil
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
