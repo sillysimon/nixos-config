@@ -18,6 +18,6 @@
   programs.dconf.enable = true;
 
   #add bluetooth support
-  services.blueman.enable = true;
+  #services.blueman.enable = true;
   
 }
