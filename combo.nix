@@ -96,6 +96,9 @@
   # Set the default Display Manager
   services.xserver.displayManager.gdm.enable = true;
 
+  # add a fix for conflicting askpass configs
+    programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
     isNormalUser = true;
