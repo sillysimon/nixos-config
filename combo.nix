@@ -10,6 +10,8 @@
       # include desktop environments
       ./modules/gnome.nix
       ./modules/plasma.nix
+      # add system config
+      ./modules/users.nix
       # include modules configuring certain apps
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
@@ -98,6 +100,8 @@
 
   # add a fix for conflicting askpass configs
     programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+  # set default session to kde wayland
+  services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
