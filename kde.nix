@@ -91,6 +91,9 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
 
+  # Set the default Display Manager
+  services.xserver.displayManager.sddm.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
     isNormalUser = true;

@@ -32,6 +32,13 @@
             # inputs.home-manager.nixosModules.default
           ];
         };
+      nixosConfigurations.combo = nixpkgs.lib.nixosSystem {
+          specialArgs = {inherit inputs;};
+          modules = [ 
+            ./combo.nix
+            # inputs.home-manager.nixosModules.default
+          ];
+        };
 
     };
 }

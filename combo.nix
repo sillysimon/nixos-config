@@ -7,8 +7,10 @@
 {imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # include modules configuring certain apps
+      # include desktop environments
       ./modules/gnome.nix
+      ./modules/plasma.nix
+      # include modules configuring certain apps
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
       ./modules/multimedia.nix
@@ -52,6 +54,9 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+
+  # Set the default session to Plasma Wayland
+  #services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Exclude xterm
   services.xserver.excludePackages = [ pkgs.xterm ];
@@ -103,8 +108,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "simon";
+  #services.xserver.displayManager.autoLogin.enable = true;
+  #services.xserver.displayManager.autoLogin.user = "simon";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
