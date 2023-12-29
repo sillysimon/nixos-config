@@ -54,7 +54,7 @@
   services.xserver.enable = true;
 
   # Set the default session to Plasma Wayland
-  services.xserver.displayManager.defaultSession = "plasmawayland";
+  #services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Exclude xterm
   services.xserver.excludePackages = [ pkgs.xterm ];

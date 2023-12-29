@@ -5,13 +5,20 @@
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
   
-  # Exclude Packages from GNOME
-  environment.gnome.excludePackages = ([
+  # Exclude Packages from KDE
+  environment.plasma5.excludePackages = ([
     pkgs.libsForQt5.elisa
+    pkgs.libsForQt5.khelpcenter
   ]);
 
-  # add gnome specific tweaks and extensions
+  # add kde specific tweaks and extensions
   environment.systemPackages = [
   ];
+  
+  #allow theme changes by enabling dconf
+  programs.dconf.enable = true;
+
+  #add bluetooth support
+  services.blueman.enable = true;
   
 }

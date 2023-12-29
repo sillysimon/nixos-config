@@ -4,5 +4,6 @@
   environment.systemPackages = [
     pkgs.vlc
     pkgs.spotify
+    pkgs.gimp
   ];
 }
