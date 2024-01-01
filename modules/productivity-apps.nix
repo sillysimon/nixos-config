@@ -8,5 +8,6 @@
     pkgs.libreoffice-fresh
     pkgs.thunderbird
     pkgs.firefox
+    pkgs.mullvad-vpn
 ];
 }
