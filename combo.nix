@@ -12,6 +12,7 @@
       ./modules/plasma.nix
       # add system config
       ./modules/users.nix
+      ./modules/networking.nix
       # include modules configuring certain apps
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
@@ -33,8 +34,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+  
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -56,9 +56,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Set the default session to Plasma Wayland
-  #services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Exclude xterm
   services.xserver.excludePackages = [ pkgs.xterm ];
@@ -99,7 +96,9 @@
   services.xserver.displayManager.gdm.enable = true;
 
   # add a fix for conflicting askpass configs
+  # https://github.com/NixOS/nixpkgs/issues/75867
     programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    
   # set default session to kde wayland
   services.xserver.displayManager.defaultSession = "plasmawayland";
 
@@ -142,15 +141,6 @@
   # };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

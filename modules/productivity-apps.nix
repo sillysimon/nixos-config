@@ -9,6 +9,5 @@
     pkgs.thunderbird
     pkgs.firefox
     pkgs.mullvad-vpn
-    pkgs.mullvad
 ];
 }

@@ -7,8 +7,12 @@
 {imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # include modules configuring certain apps
+      # add desktop environment
       ./modules/gnome.nix
+      # add system config
+      ./modules/users.nix
+      ./modules/networking.nix
+      # include modules configuring certain apps
       ./modules/vscode.nix
       ./modules/productivity-apps.nix
       ./modules/multimedia.nix
@@ -29,8 +33,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -130,9 +132,6 @@
   # };
 
   # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

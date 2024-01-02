@@ -13,3 +13,7 @@ In this document, I'll provide links to ressources that helped build these confi
     - official wiki Entry for configuring gnome
 - [https://nixos.wiki/wiki/KDE](https://nixos.wiki/wiki/KDE)
     - official wiki Entry for KDE
+- [https://nixos.wiki/wiki/Systemd-resolved](https://nixos.wiki/wiki/Systemd-resolved)
+    - official wiki Entry for Systemd Resolved
+- [https://nixos.wiki/wiki/Mullvad_VPN](https://nixos.wiki/wiki/Mullvad_VPN)
+    - official wiki Entry for MullvadVPN
