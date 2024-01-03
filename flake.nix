@@ -21,31 +21,24 @@
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-            ./combo.nix
+            ./simyoga.nix
             # inputs.home-manager.nixosModules.default
           ];
         };
-        nixosConfigurations.gnome = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.simyoga = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [ 
-            ./gnome.nix
+            ./simyoga.nix
             # inputs.home-manager.nixosModules.default
           ];
         };
-      nixosConfigurations.kde = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+      nixosConfigurations.simtab = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
           modules = [ 
-            ./kde.nix
+            ./simtab.nix
             # inputs.home-manager.nixosModules.default
           ];
-        };
-      nixosConfigurations.combo = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
-          modules = [ 
-            ./combo.nix
-            # inputs.home-manager.nixosModules.default
-          ];
-        };
+      };
 
     };
 }

@@ -14,16 +14,14 @@
       ./modules/networking.nix
       # include modules configuring certain apps
       ./modules/vscode.nix
-      ./modules/productivity-apps.nix
       ./modules/multimedia.nix
-      ./modules/environment.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "simbook"; # Define your hostname.
+  networking.hostName = "simtab"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
   # Enable Flakes
@@ -100,6 +98,10 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      brave
+      nextcloud-client
+      xournalpp
+      keepassxc
     #  thunderbird
     ];
   };
