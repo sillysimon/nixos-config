@@ -8,7 +8,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       # add desktop environment
-      ./modules/plsama.nix
+      ./modules/gnome.nix
       # add system config
       ./modules/users.nix
       ./modules/networking.nix
@@ -33,6 +33,7 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -53,9 +54,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Set the default session to Plasma Wayland
-  #services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Exclude xterm
   services.xserver.excludePackages = [ pkgs.xterm ];
@@ -93,7 +91,7 @@
   services.xserver.libinput.enable = true;
 
   # Set the default Display Manager
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {

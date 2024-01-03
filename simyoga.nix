@@ -7,8 +7,9 @@
 {imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # add desktop environment
-      ./modules/plsama.nix
+      # include desktop environments
+      ./modules/gnome.nix
+      ./modules/plasma.nix
       # add system config
       ./modules/users.nix
       ./modules/networking.nix
@@ -23,7 +24,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "simbook"; # Define your hostname.
+  networking.hostName = "simyoga"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
   # Enable Flakes
@@ -32,6 +33,8 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -53,9 +56,6 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
-  # Set the default session to Plasma Wayland
-  #services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Exclude xterm
   services.xserver.excludePackages = [ pkgs.xterm ];
@@ -93,7 +93,14 @@
   services.xserver.libinput.enable = true;
 
   # Set the default Display Manager
-  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+
+  # add a fix for conflicting askpass configs
+  # https://github.com/NixOS/nixpkgs/issues/75867
+    programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+    
+  # set default session to kde wayland
+  services.xserver.displayManager.defaultSession = "plasmawayland";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
@@ -107,8 +114,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "simon";
+  #services.xserver.displayManager.autoLogin.enable = true;
+  #services.xserver.displayManager.autoLogin.user = "simon";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -134,12 +141,6 @@
   # };
 
   # List services that you want to enable:
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

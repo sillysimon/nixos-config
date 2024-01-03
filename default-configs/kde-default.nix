@@ -4,40 +4,32 @@
 
 { config, pkgs, ... }:
 
-{imports =
+{
+  imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # add desktop environment
-      ./modules/plsama.nix
-      # add system config
-      ./modules/users.nix
-      ./modules/networking.nix
-      # include modules configuring certain apps
-      ./modules/vscode.nix
-      ./modules/productivity-apps.nix
-      ./modules/multimedia.nix
-      ./modules/environment.nix
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "simbook"; # Define your hostname.
+  boot.initrd.luks.devices."luks-3f09643c-88a8-42da-9050-963232f30db1".device = "/dev/disk/by-uuid/3f09643c-88a8-42da-9050-963232f30db1";
+  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  
-  # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+  # Enable networking
+  networking.networkmanager.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "de_DE.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "de_DE.UTF-8";
@@ -54,12 +46,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Set the default session to Plasma Wayland
-  #services.xserver.displayManager.defaultSession = "plasmawayland";
+  # Enable the KDE Plasma Desktop Environment.
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
-  # Exclude xterm
-  services.xserver.excludePackages = [ pkgs.xterm ];
-  
   # Configure keymap in X11
   services.xserver = {
     layout = "de";
@@ -90,10 +80,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-
-  # Set the default Display Manager
-  services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
@@ -102,27 +89,19 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      kate
     #  thunderbird
     ];
   };
 
-  # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "simon";
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable flatpak for even more Applications
-  services.flatpak.enable = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  # ATTENTION: PLEASE PUT PACKAGES IN SEPARATE MODULES
   environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    git
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -134,6 +113,9 @@
   # };
 
   # List services that you want to enable:
+
+  # Enable the OpenSSH daemon.
+  # services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
