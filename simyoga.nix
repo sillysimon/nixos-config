@@ -18,6 +18,8 @@
       ./modules/productivity-apps.nix
       ./modules/multimedia.nix
       ./modules/environment.nix
+      # CAUTION! IF YOU ENABLE THIS, ONLY BLUETOOTH AUDIO SINKS WILL BE DETECTED!
+      ./modules/bluetooth-audio.nix
     ];
 
   # Bootloader.
