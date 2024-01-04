@@ -91,6 +91,9 @@
   # Set the default Display Manager
   services.xserver.displayManager.gdm.enable = true;
 
+  # try to enable fractional scaling
+  hardware.video.hidpi.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
     isNormalUser = true;
@@ -107,8 +110,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "simon";
+  #services.xserver.displayManager.autoLogin.enable = true;
+  #services.xserver.displayManager.autoLogin.user = "simon";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
