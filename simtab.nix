@@ -20,6 +20,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # if you enable this, the system might not shut down approprietly
   #boot.plymouth.enable = true;
 
   networking.hostName = "simtab"; # Define your hostname.

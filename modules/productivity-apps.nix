@@ -9,5 +9,6 @@
     pkgs.thunderbird
     pkgs.firefox
     pkgs.kate
+    pkgs.cryptomator
 ];
 }
