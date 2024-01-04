@@ -102,6 +102,7 @@
       nextcloud-client
       xournalpp
       keepassxc
+      cryptomator
     #  thunderbird
     ];
   };
