@@ -12,6 +12,7 @@
 
   # add kde specific tweaks and extensions
   environment.systemPackages = [
+    pkgs.maliit-keyboard
   ];
   
   #allow theme changes by enabling dconf
