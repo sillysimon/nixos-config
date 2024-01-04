@@ -91,9 +91,6 @@
   # Set the default Display Manager
   services.xserver.displayManager.gdm.enable = true;
 
-  # try to enable fractional scaling
-  hardware.video.hidpi.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {
     isNormalUser = true;

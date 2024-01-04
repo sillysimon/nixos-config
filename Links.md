@@ -9,6 +9,8 @@ In this document, I'll provide links to ressources that helped build these confi
 ## Forum posts
 - [https://discourse.nixos.org/t/need-help-for-nixos-gnome-scaling-settings/24590/7](https://discourse.nixos.org/t/need-help-for-nixos-gnome-scaling-settings/24590/7)
     - forum entry for fractional scaling
+- [https://github.com/NixOS/nixpkgs/issues/114514#issuecomment-786933710](https://github.com/NixOS/nixpkgs/issues/114514#issuecomment-786933710)
+    - GitHub issue for enabling fractional scaling under nixOS
 
 ## Official Resources and Wikis
 - [https://nixos.wiki/wiki/GNOME](https://nixos.wiki/wiki/GNOME)
