@@ -17,6 +17,7 @@
     pkgs.gnome.gnome-music
     pkgs.gnome.gnome-maps
     pkgs.gnome.gnome-weather
+    pkgs.gnome.totem
   ]);
 
   # add gnome specific tweaks and extensions
@@ -26,6 +27,7 @@
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.desktop-cube
+    pkgs.gnome-photos
   ];
   
 }
