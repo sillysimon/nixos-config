@@ -16,6 +16,7 @@
     pkgs.maliit-keyboard
     # package providing sensor data for auto screen rotation 
     pkgs.iio-sensor-proxy
+    pkgs.gjs
   ];
   
   #allow theme changes by enabling dconf
