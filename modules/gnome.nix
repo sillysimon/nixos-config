@@ -28,6 +28,8 @@
     pkgs.gnomeExtensions.gsconnect
     pkgs.gnomeExtensions.desktop-cube
     pkgs.gnome-photos
+    # package providing sensor data for auto screen rotation 
+    pkgs.iio-sensor-proxy
   ];
   
 }

@@ -12,7 +12,10 @@
 
   # add kde specific tweaks and extensions
   environment.systemPackages = [
+    # virtual keyboard for touchscreens
     pkgs.maliit-keyboard
+    # package providing sensor data for auto screen rotation 
+    pkgs.iio-sensor-proxy
   ];
   
   #allow theme changes by enabling dconf
