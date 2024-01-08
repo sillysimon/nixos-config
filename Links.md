@@ -11,6 +11,8 @@ In this document, I'll provide links to ressources that helped build these confi
     - forum entry for fractional scaling
 - [https://github.com/NixOS/nixpkgs/issues/114514#issuecomment-786933710](https://github.com/NixOS/nixpkgs/issues/114514#issuecomment-786933710)
     - GitHub issue for enabling fractional scaling under nixOS
+- [https://stackoverflow.com/questions/74988387/override-value-in-systemd-unit](https://stackoverflow.com/questions/74988387/override-value-in-systemd-unit)
+    - making systemd unit overrides
 
 ## Official Resources and Wikis
 - [https://nixos.wiki/wiki/GNOME](https://nixos.wiki/wiki/GNOME)

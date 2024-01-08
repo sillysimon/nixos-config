@@ -23,6 +23,11 @@
       DNSOverTLS=yes
     '';
   };
+  #enable debug output for systemd-resolved
+  systemd.services.systemd-resolved = {
+    overrideStrategy = "asDropin";
+    serviceConfig.Environment = "SYSTEMD_LOG_LEVEL=debug";
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
