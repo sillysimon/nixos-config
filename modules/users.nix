@@ -16,6 +16,7 @@
       description = "Schule";
       extraGroups = [ "networkmanager" "wheel"];
       packages = with pkgs; [
+        pkgs.ciscoPacketTracer8
       ];
     };
   }
