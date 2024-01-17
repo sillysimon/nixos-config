@@ -32,4 +32,7 @@
     pkgs.gnomeExtensions.screen-rotate
   ];
   
+  #enable iio-sensors-proxy for screen rotation
+  hardware.sensor.iio.enable = true;
+
 }

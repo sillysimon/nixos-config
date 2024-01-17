@@ -25,3 +25,5 @@ In this document, I'll provide links to ressources that helped build these confi
     - official wiki Entry for MullvadVPN
 - [https://nixos.wiki/wiki/Automatic_system_upgrades](https://nixos.wiki/wiki/Automatic_system_upgrades)
     - official wiki Entry for automatic update
+- [https://nixos.wiki/wiki/IIO](https://nixos.wiki/wiki/IIO)
+    - wiki Entry for device sensors (e.g. screen rotate)
