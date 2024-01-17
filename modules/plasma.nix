@@ -21,6 +21,9 @@
   
   #allow theme changes by enabling dconf
   programs.dconf.enable = true;
+  
+  #enable iio-sensors-proxy for screen rotation
+  hardware.sensor.iio.enable = true;
 
   #add bluetooth support
   #services.blueman.enable = true;
