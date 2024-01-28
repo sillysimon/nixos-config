@@ -1,3 +1,2 @@
 #!/run/current-system/sw/bin/bash
-sudo nix flake update /etc/nixos/
-./load_config.sh
+sudo nix flake update .
