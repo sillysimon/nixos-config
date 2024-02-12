@@ -6,5 +6,6 @@
     pkgs.spotify
     pkgs.gimp
     pkgs.audacity
+    pkgs.ffmpeg
   ];
 }
