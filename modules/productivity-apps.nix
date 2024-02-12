@@ -10,5 +10,6 @@
     pkgs.firefox
     pkgs.kate
     pkgs.cryptomator
+    pkgs.drawio
 ];
 }
