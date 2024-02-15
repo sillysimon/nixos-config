@@ -7,5 +7,9 @@
     pkgs.vscode-extensions.jnoortheen.nix-ide
     pkgs.nil
     pkgs.direnv
+    ## add the rust toolchain
+    pkgs.rustc
+    pkgs.cargo
+    pkgs.rust-analyzer
   ];
 }
