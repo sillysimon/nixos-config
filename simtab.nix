@@ -13,7 +13,7 @@
       ./modules/users.nix
       ./modules/networking.nix
       # include modules configuring certain apps
-      ./modules/vscode.nix
+      ./modules/code.nix
       ./modules/multimedia.nix
     ];
 
