@@ -11,5 +11,6 @@
     pkgs.kate
     pkgs.cryptomator
     pkgs.drawio
+    pkgs.remmina
 ];
 }
