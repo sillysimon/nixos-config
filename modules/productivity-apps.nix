@@ -12,5 +12,6 @@
     pkgs.cryptomator
     pkgs.drawio
     pkgs.remmina
+    pkgs.libsForQt5.kdenlive
 ];
 }
