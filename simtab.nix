@@ -10,7 +10,7 @@
       # add desktop environment
       ./modules/gnome.nix
       # add system config
-      ./modules/users.nix
+      #./modules/users.nix
       ./modules/networking.nix
       # include modules configuring certain apps
       ./modules/code.nix
