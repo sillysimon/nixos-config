@@ -7,6 +7,10 @@
   environment.systemPackages = [pkgs.mullvad-vpn pkgs.dig];
   # enable mullvad VPN
   services.mullvad-vpn.enable = true;
+  # leave the option for Zerotier
+  services.zerotierone.enable = false;
+  # also tailscale
+  services.tailscale.enable = false;
 
 
   # Configure systemd-resolved
