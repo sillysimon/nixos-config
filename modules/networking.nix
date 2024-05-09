@@ -18,13 +18,13 @@
 
   services.resolved = {
     enable = true;
-    dnssec = "true";
+    dnssec = "false";
+    #dnsovertls = "false";
     domains = [ "~." ];
     fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
     #some networks (for example my school wifi) do not allow DNS over TLS
     #either comment out this line or connect through mullvad with UDP-over-TCP Obfuscation enabled
     extraConfig = ''
-      DNSOverTLS=yes
     '';
   };
   #enable debug output for systemd-resolved
