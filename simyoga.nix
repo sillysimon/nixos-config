@@ -20,6 +20,7 @@
       ./modules/environment.nix
       # You might need to restart your computer after setup for audio to work after enabling this
       ./modules/bluetooth-audio.nix
+      ./modules/virtualization.nix
     ];
 
   # Bootloader.
