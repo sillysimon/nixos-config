@@ -12,5 +12,7 @@
     pkgs.cargo
     pkgs.rust-analyzer
     pkgs.gcc
+    # add make cause why not
+    pkgs.gnumake
   ];
 }
