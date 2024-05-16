@@ -15,6 +15,7 @@
     pkgs.fortune
     # system utilities
     pkgs.appimage-run
+    pkgs.busybox
   ];
   #allow for dynamically linked binaries
   programs.nix-ld.enable = true;
