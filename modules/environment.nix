@@ -16,6 +16,13 @@
     # system utilities
     pkgs.appimage-run
     pkgs.busybox
+    # all the tops
+    pkgs.htop
+    pkgs.btop
+    pkgs.usbtop
+    pkgs.iotop
+    pkgs.glances
+    pkgs.inotify-tools
   ];
   #allow for dynamically linked binaries
   programs.nix-ld.enable = true;
