@@ -16,6 +16,7 @@
     # system utilities
     pkgs.appimage-run
     pkgs.busybox
+    pkgs.fzf
     # all the tops
     pkgs.htop
     pkgs.btop
