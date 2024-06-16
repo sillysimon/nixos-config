@@ -65,8 +65,8 @@
   
   # Configure keymap in X11
   services.xserver = {
-    layout = "de";
-    xkbVariant = "nodeadkeys";
+    xkb.layout = "de";
+    xkb.variant = "nodeadkeys";
   };
 
   # Configure console keymap
@@ -93,7 +93,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Set the default Display Manager
   services.xserver.displayManager.gdm.enable = true;
@@ -103,7 +103,7 @@
     programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
     
   # set default session to kde wayland
-  services.xserver.displayManager.defaultSession = "plasmawayland";
+  services.displayManager.defaultSession = "plasma";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.simon = {

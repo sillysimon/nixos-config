@@ -6,5 +6,5 @@ then
     config=$1
 fi
 sudo cp -r ./* /etc/nixos/
-sudo nixos-rebuild switch --flake /etc/nixos#$config
+sudo nice -n 19 nixos-rebuild switch --flake /etc/nixos#$config
 
