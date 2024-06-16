@@ -59,9 +59,9 @@
   services.xserver.excludePackages = [ pkgs.xterm ];
   
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "de";
-    xkbVariant = "nodeadkeys";
+    variant = "nodeadkeys";
   };
 
   # Configure console keymap
@@ -88,7 +88,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Set the default Display Manager
   services.xserver.displayManager.gdm.enable = true;
@@ -98,6 +98,7 @@
     isNormalUser = true;
     description = "Simon Waidele";
     extraGroups = [ "networkmanager" "wheel" ];
+    initialHashedPassword = "$y$j9T$xlehimhWNoWt3NhZ3hsZM.$oC/jWbC6xKthzbt8vP3GZUr6KFp5rHjFN1/zxrHrfYC";
     packages = with pkgs; [
       firefox
       brave
