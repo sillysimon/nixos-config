@@ -7,5 +7,7 @@
     pkgs.gimp
     pkgs.audacity
     pkgs.ffmpeg
+    # game streaming
+    pkgs.moonlight-qt
   ];
 }
