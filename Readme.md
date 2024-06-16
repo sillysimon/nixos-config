@@ -1,5 +1,7 @@
 # NixOS configuration
 
+**This is a branch for an old version of nixos, the most up to date one will always be in main**
+
 This repository houses all my NixOS configurations as a backup. I just started so some things may not be correct.
 
 ## Structure
