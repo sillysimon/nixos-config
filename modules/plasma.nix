@@ -25,7 +25,7 @@
   #enable iio-sensors-proxy for screen rotation
   hardware.sensor.iio.enable = true;
 
-  #add bluetooth support
-  services.blueman.enable = true;
+  #add bluetooth support, may not be necessary and leaves an ugly icon in the tray
+  #services.blueman.enable = true;
   
 }
