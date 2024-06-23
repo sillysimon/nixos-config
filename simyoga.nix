@@ -144,6 +144,9 @@
   #   enableSSHSupport = true;
   # };
 
+  #networking.firewall.allowedTCPPorts = [ 8080 ];
+  #networking.firewall.allowedUDPPorts = [ 8080 ];
+
   # List services that you want to enable:
 
   # This value determines the NixOS release from which the default
