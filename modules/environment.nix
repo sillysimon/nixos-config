@@ -17,6 +17,7 @@
     pkgs.appimage-run
     pkgs.busybox
     pkgs.fzf
+    pkgs.file
     # all the tops
     pkgs.htop
     pkgs.btop
