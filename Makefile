@@ -7,3 +7,5 @@ update:
 	git add flake.lock
 	git commit -m "updated system"
 	git push
+clean:
+	sudo nix-collect-garbage --delete-older-than 200d
