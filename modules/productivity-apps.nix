@@ -14,6 +14,5 @@
     pkgs.drawio
     pkgs.remmina
     pkgs.libsForQt5.kdenlive
-    pkgs.freecad
 ];
 }

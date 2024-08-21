@@ -16,6 +16,7 @@
       # include modules configuring certain apps
       ./modules/code.nix
       ./modules/productivity-apps.nix
+      ./modules/3d_printing.nix
       ./modules/multimedia.nix
       ./modules/environment.nix
       # You might need to restart your computer after setup for audio to work after enabling this
@@ -74,6 +75,8 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  hardware.spacenavd.enable = true;
 
   # Enable sound with pipewire.
   sound.enable = true;
