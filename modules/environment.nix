@@ -18,6 +18,7 @@
     pkgs.busybox
     pkgs.fzf
     pkgs.file
+    pkgs.neovim
     # all the tops
     pkgs.htop
     pkgs.btop
