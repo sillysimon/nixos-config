@@ -8,5 +8,7 @@
     pkgs.qemu
     pkgs.virt-manager
     pkgs.quickemu
+    ## distrobox
+    pkgs.distrobox
 ];
 }
