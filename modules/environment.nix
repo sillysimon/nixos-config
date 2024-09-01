@@ -19,6 +19,12 @@
     pkgs.fzf
     pkgs.file
     pkgs.neovim
+    # file system things
+    pkgs.gparted
+    pkgs.ntfs3g
+    pkgs.btrfs-progs
+    pkgs.apfs-fuse
+    pkgs.hfsprogs
     # all the tops
     pkgs.htop
     pkgs.btop

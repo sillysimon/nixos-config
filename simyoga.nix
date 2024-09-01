@@ -19,9 +19,10 @@
       ./modules/3d_printing.nix
       ./modules/multimedia.nix
       ./modules/environment.nix
+      ./modules/virtualization.nix
       # You might need to restart your computer after setup for audio to work after enabling this
       ./modules/bluetooth-audio.nix
-      ./modules/virtualization.nix
+      
     ];
 
   # Bootloader.
