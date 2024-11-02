@@ -8,4 +8,4 @@ update:
 	git commit -m "updated system"
 	git push
 clean:
-	sudo nix-collect-garbage --delete-older-than 200d
+	sudo nix-collect-garbage --delete-older-than 100d
