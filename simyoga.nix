@@ -113,7 +113,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon Waidele";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" "qemu" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxusers" "qemu" "cdrom" ];
     packages = with pkgs; [
       firefox
       teamspeak_client
