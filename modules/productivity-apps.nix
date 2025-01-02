@@ -10,7 +10,7 @@
     pkgs.firefox
     pkgs.zettlr
     pkgs.kate
-    pkgs.cryptomator
+    #currently broken :( pkgs.cryptomator
     pkgs.drawio
     pkgs.remmina
     pkgs.libsForQt5.kdenlive
