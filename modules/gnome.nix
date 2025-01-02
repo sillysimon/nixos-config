@@ -22,7 +22,7 @@
 
   # add gnome specific tweaks and extensions
   environment.systemPackages = [
-    pkgs.gnome.gnome-tweaks
+    pkgs.gnome-tweaks
     pkgs.gnomeExtensions.dash-to-dock
     pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.gsconnect
