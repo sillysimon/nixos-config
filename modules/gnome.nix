@@ -10,14 +10,14 @@
   
   # Exclude Packages from GNOME
   environment.gnome.excludePackages = ([
-    pkgs.gnome.epiphany
+    pkgs.epiphany
     pkgs.gnome-tour
-    pkgs.gnome.geary
+    pkgs.geary
     pkgs.gnome-text-editor
-    pkgs.gnome.gnome-music
-    pkgs.gnome.gnome-maps
-    pkgs.gnome.gnome-weather
-    pkgs.gnome.totem
+    pkgs.gnome-music
+    pkgs.gnome-maps
+    pkgs.gnome-weather
+    pkgs.totem
   ]);
 
   # add gnome specific tweaks and extensions
