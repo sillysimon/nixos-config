@@ -3,7 +3,7 @@ simyoga:
 simtab:
 	sudo ./load_config.sh simtab
 update:
-	nix flake update .
+	nix flake update --flake .
 	git add flake.lock
 	git commit -m "updated system"
 	git push
