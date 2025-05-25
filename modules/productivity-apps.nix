@@ -9,7 +9,7 @@
     pkgs.thunderbird
     pkgs.firefox
     pkgs.zettlr
-    pkgs.kate
+    pkgs.kdePackages.kate
     #currently broken :( pkgs.cryptomator
     pkgs.drawio
     pkgs.remmina

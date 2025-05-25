@@ -87,7 +87,7 @@
 
   # add a fix for conflicting askpass configs
   # https://github.com/NixOS/nixpkgs/issues/75867
-    programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.ksshaskpass.out}/bin/ksshaskpass";
+  programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.kdePackages.ksshaskpass.out}/bin/ksshaskpass";
     
   # set default session to kde wayland
   services.displayManager.defaultSession = "plasma";
@@ -105,7 +105,7 @@
   };
 
   #activate the integrated modem of the laptop
-  networking.networkmanager.fccUnlockScripts = [{ id = "1199:9079"; path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/1199:9079"; }v];
+  networking.modemmanager.fccUnlockScripts = [{ id = "1199:9079"; path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/1199:9079"; }];
 
   # Enable automatic login for the user.
   #services.xserver.displayManager.autoLogin.enable = true;

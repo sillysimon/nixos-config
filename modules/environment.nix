@@ -3,7 +3,7 @@
   #environment specific configuration (like fonts)
   environment.systemPackages = [
     #fonts
-    pkgs.nerdfonts
+    #pkgs.nerd-fonts
     pkgs.corefonts
     pkgs.monaspace
     pkgs.comic-mono
