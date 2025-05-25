@@ -105,7 +105,7 @@
   };
 
   #activate the integrated modem of the laptop
-  networking.networkmanager.fccUnlockScripts = [{ id = "1199:9079"; path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/1199:9079"; }];
+  networking.networkmanager.fccUnlockScripts = [{ id = "1199:9079"; path = "${pkgs.modemmanager}/share/ModemManager/fcc-unlock.available.d/1199:9079"; }v];
 
   # Enable automatic login for the user.
   #services.xserver.displayManager.autoLogin.enable = true;
