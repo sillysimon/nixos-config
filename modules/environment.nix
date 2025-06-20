@@ -19,6 +19,7 @@
     pkgs.fzf
     pkgs.file
     pkgs.neovim
+    pkgs.tldr
     # file system things
     pkgs.gparted
     pkgs.ntfs3g
