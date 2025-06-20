@@ -8,12 +8,12 @@
     pkgs.libreoffice-fresh
     pkgs.thunderbird
     pkgs.firefox
-    pkgs.zettlr
     pkgs.kdePackages.kate
     #currently broken :( pkgs.cryptomator
     pkgs.drawio
     pkgs.remmina
     pkgs.libsForQt5.kdenlive
     pkgs.localsend
+    pkgs.keepassxc
 ];
 }
