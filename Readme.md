@@ -1,5 +1,7 @@
 # NixOS configuration
 
+**Moved to [https://codeberg.org/SillySimon/nixos-config](https://codeberg.org/SillySimon/nixos-config)**
+
 This repository houses all my NixOS configurations as a backup. I just started so some things may not be correct.
 
 ## Structure
